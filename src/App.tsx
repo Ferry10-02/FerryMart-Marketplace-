@@ -8,6 +8,7 @@ import SellerProductUpload from './SellerProductUpload';
 import ProfileSettings from './ProfileSettings';
 import { usePasskeyEnhancement } from './usePasskeyEnhancement';
 import { useAdminRoleAppearance } from './useAdminRoleAppearance';
+import { useAdminDashboard } from './useAdminDashboard';
 
 type Cart = Record<string, number>;
 type LiveProductRow={id:string;name:string;price:number|string;compare_at_price:number|string|null;stock:number;image_paths:string[];store_id:string;categories:{name:string}|{name:string}[]|null;stores:{name:string}|{name:string}[]|null};
@@ -23,6 +24,7 @@ function App(){
   useAccountSettingsEnhancements();
   usePasskeyEnhancement();
   useAdminRoleAppearance();
+  useAdminDashboard();
   const [cart,setCart]=useState<Cart>(()=>JSON.parse(localStorage.getItem('fm-cart')||'{}'));
   const [wish,setWish]=useState<string[]>(()=>JSON.parse(localStorage.getItem('fm-wish')||'[]'));
   const [search,setSearch]=useState(''); const [notice,setNotice]=useState('');

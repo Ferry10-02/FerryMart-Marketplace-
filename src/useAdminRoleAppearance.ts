@@ -58,8 +58,11 @@ export function useAdminRoleAppearance() {
     void supabase.auth.getUser().then(({ data }) => {
       if (active) void syncAdminView(data.user?.id);
     });
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      window.setTimeout(() => void syncAdminView(session?.user.id), 0);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      window.setTimeout(async () => {
+        await syncAdminView(session?.user.id);
+        if (event === 'SIGNED_IN' && currentIsAdmin) window.location.assign('/admin/products');
+      }, 0);
     });
     const observer = new MutationObserver(() => {
       renderAdminView();
