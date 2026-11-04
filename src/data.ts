@@ -1,0 +1,14 @@
+export type Product = { id: string; name: string; category: string; price: number; oldPrice?: number; rating: number; reviews: string; image: string; emoji: string; shop: string; stock: number; storeId?: string; live?: boolean };
+export const categories = [
+  { name: 'Elektronik', icon: '📱', color: '#e8f1ff' }, { name: 'Fashion', icon: '👕', color: '#fff2d9' }, { name: 'Kecantikan', icon: '🧴', color: '#ffeaf0' }, { name: 'Rumah & Dapur', icon: '🏠', color: '#dcf8f2' }, { name: 'Olahraga', icon: '🏀', color: '#ffede4' }, { name: 'Ibu & Bayi', icon: '🧸', color: '#eaf2ff' }, { name: 'Otomotif', icon: '🚙', color: '#e8f1ff' }, { name: 'Lainnya', icon: '•••', color: '#f0efff' },
+];
+export const products: Product[] = [
+  { id:'iphone-15', name:'iPhone 15 128GB Garansi Resmi', category:'Elektronik', price:14999000, oldPrice:16999000, rating:4.8, reviews:'2,5 rb', image:'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=700&q=80', emoji:'📱', shop:'TechWorld', stock:12 },
+  { id:'nike-air-force', name:'Nike Air Force 1 Sepatu Sneakers Pria', category:'Fashion', price:1399000, oldPrice:1999000, rating:4.7, reviews:'1,2 rb', image:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=80', emoji:'👟', shop:'FashionHub', stock:24 },
+  { id:'tas-ransel', name:'Tas Ransel Laptop Waterproof 15.6”', category:'Fashion', price:299000, oldPrice:499000, rating:4.6, reviews:'850', image:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80', emoji:'🎒', shop:'Urban Goods', stock:31 },
+  { id:'skincare-set', name:'Skincare Set Pencerah Wajah', category:'Kecantikan', price:89000, oldPrice:149000, rating:4.9, reviews:'3,1 rb', image:'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80', emoji:'🧴', shop:'BeautyCorner', stock:45 },
+  { id:'headphone', name:'JBL Headphone Bluetooth', category:'Elektronik', price:1299000, rating:4.8, reviews:'940', image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80', emoji:'🎧', shop:'TechWorld', stock:18 },
+  { id:'jam-casio', name:'Jam Tangan Pria Sport', category:'Fashion', price:799000, rating:4.7, reviews:'620', image:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80', emoji:'⌚', shop:'TimeKeeper', stock:9 },
+  { id:'setelan', name:'Setelan Baju Muslim Wanita', category:'Fashion', price:259000, rating:4.6, reviews:'410', image:'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80', emoji:'👗', shop:'FashionHub', stock:16 },
+  { id:'lampu-meja', name:'Lampu Meja Minimalis Modern', category:'Rumah & Dapur', price:189000, oldPrice:249000, rating:4.7, reviews:'308', image:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80', emoji:'💡', shop:'HomeLiving', stock:22 },
+];
